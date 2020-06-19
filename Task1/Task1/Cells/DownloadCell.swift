@@ -78,7 +78,7 @@ class DownloadCell: UITableViewCell {
     cancelButton.isHidden  = !showDownloadControls
     progressView.isHidden  = !showDownloadControls
     progressLabel.isHidden = !showDownloadControls
-    viewButton.isHidden    = true
+    viewButton.isHidden    = !downloaded
     // If the track is already downloaded, enable cell selection and hide the Download button.
     selectionStyle = downloaded ? UITableViewCell.SelectionStyle.gray : UITableViewCell.SelectionStyle.none
     downloadButton.isHidden = downloaded || showDownloadControls
